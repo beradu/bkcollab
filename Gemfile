@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -17,6 +15,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 
+group :development, :test do
+	gem 'sqlite3'
+# Use SCSS for stylesheets
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
