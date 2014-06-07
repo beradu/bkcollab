@@ -1,8 +1,11 @@
 Pinteresting::Application.routes.draw do
+  resources :pins
+
   devise_for :users
   root "pages#home"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
+  get "Pins" => "pages#pins"
 
    #creates about path
   # The priority is based upon order of creation: first created -> highest priority.
