@@ -4,5 +4,7 @@
   <strong>Description:</strong>
 </p>
 
-<%= link_to 'Edit', pins_path %> |
-<%= link_to 'Back', pins_path %>
+<% if @pin.user == current_user %>
+	<%= link_to 'Edit', pins_path %> |
+<% end %>
+	<%= link_to 'Back', pins_path %>
