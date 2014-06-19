@@ -10,6 +10,7 @@ class PinsController < ApplicationController
   
 
   def show
+   
   end
 
   def new
