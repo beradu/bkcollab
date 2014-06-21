@@ -2,11 +2,13 @@
 $body-bg:   					#bdc3c7;
 $font-family-sans-serif: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:					45px;
+$text-align:					center;
 $navbar-default-bg: 			#2980b9;
 $navbar-default-brand-color: 	white;
 $navbar-default-link-color:		white;
 $brand-primary:  				#2980b9;
 $jumbotron-bg:  				white;
+
 
 @import 'bootstrap';
 
@@ -17,4 +19,5 @@ $jumbotron-bg:  				white;
 
 .navbar-brand {
 	font-weight: bold;
+
 }
