@@ -1,6 +1,6 @@
 <div class="jumbotron center">
 	<H1>Welcome to the REAL Danger Zone!</H1>
-	<% if user_signed_in? %>
+	
 	<%= link_to "Create Pin", new_pin_path, class: "btn btn-primary btn-lg" %>
 	<%= link_to "Show Pin", @pin, class: "btn btn-default btn-lg" %>
 	<% else %>
@@ -8,5 +8,4 @@
 	<%= link_to "Log in", new_user_session_path , class: "btn btn-default btn-lg" %>
 	<%= link_to "Sign up", new_user_registration_path , class: "btn btn-primary btn-lg" %>
 	</p>
-	<% end %>
 </div>

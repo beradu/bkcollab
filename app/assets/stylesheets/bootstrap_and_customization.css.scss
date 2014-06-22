@@ -9,15 +9,31 @@ $navbar-default-link-color:		white;
 $brand-primary:  				#2980b9;
 $jumbotron-bg:  				white;
 
-
-@import 'bootstrap';
-
-
+  
 .center {
 	text-align: center;
 }
-
 .navbar-brand {
 	font-weight: bold;
 
 }
+
+.container-fluid {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+ .navbar .nav .btn-xs {
+ 	position: relative; 
+ 	margin-top: 4px; 
+ 	margin-bottom: 4px;
+ 	font-weight: bold;
+}
+
+
+.navbar .nav > li > a {
+ font-weight: bold;
+}
+
+
+@import 'bootstrap';
