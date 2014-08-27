@@ -15,9 +15,11 @@
 	</p>
 	<p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
-	<% if @pin.user == current_user %>
+	<% if current_user && (@pin.user == current_user) %>
+
+
 	<%= link_to pins_path do %>
-		<span class="glyphicon glyphicon-pushpin"></span> Edit
+	<span class="glyphicon glyphicon-pushpin"></span> Edit
 		<% end %>
 	<%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
              <span class="glyphicon glyphicon-trash"></span>
@@ -27,5 +29,4 @@
 		</div>
 	</div>
 </div>
-
 

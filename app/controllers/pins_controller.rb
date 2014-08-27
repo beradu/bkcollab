@@ -4,7 +4,7 @@ class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page])
   end
 
   
@@ -53,7 +53,7 @@ class PinsController < ApplicationController
       redirect_to pins_path, notice: "Not authorized to edit this pin" if @pin.nil?
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     # what you permit the user to update 
     def pin_params
       params.require(:pin).permit(:description, :image)

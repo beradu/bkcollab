@@ -22,7 +22,9 @@ gem 'aws-sdk', '~>1.4'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap' 
-
+gem 'like', '~> 0.2.1'
+gem 'rails_admin', '~>0.6.2'
+gem 'acts_as_commentable_with_threading'
 
 group :development, :test do
 	gem 'sqlite3'

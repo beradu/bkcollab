@@ -1,6 +1,6 @@
 # One Month Rails
 
 This is the pinteresting sample application for
-[*One Month Rails*](http://onemonthrails.com)
+[BKCollab](http://bkcollab.com)
 
 by [Brad Rossman] (http://datativity.co)

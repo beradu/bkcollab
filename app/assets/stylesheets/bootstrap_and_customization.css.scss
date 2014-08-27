@@ -18,22 +18,9 @@ $jumbotron-bg:  				white;
 
 }
 
-.container-fluid {
-	margin-top: 5px;
-	margin-bottom: 5px;
+.logo-header img {
+	max-width: 50%;
+	max-height: 50%;
 }
-
- .navbar .nav .btn-xs {
- 	position: relative; 
- 	margin-top: 4px; 
- 	margin-bottom: 4px;
- 	font-weight: bold;
-}
-
-
-.navbar .nav > li > a {
- font-weight: bold;
-}
-
 
 @import 'bootstrap';

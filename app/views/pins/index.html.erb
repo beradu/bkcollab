@@ -1,5 +1,9 @@
-<%= render 'pages/home' unless user_signed_in? %>
-
+<div class="jumbotron center">
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Marketing</a></li>
+  <li><a href="#">Search</a></li>
+  <li><a href="#">International</a></li>
+</ul>
 
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
@@ -8,23 +12,26 @@
         <div class="panel-body">
          <p><%= pin.description %></p>
           <strong><%= pin.user.name if pin.user %></strong>
-          
+
           <% if current_user && (pin.user == current_user) %>
-            <div class="actions">
-              <%= link_to edit_pin_path(pin) do %>
-                <span class="glyphicon glyphicon-pushpin"></span>
-                Edit
-              <% end %>
-            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-             <span class="glyphicon glyphicon-trash"></span>
-              Delete
-             <% end %>
-          </div>
+                
+                <div class="actions">
+                  <%= link_to edit_pin_path(pin) do %>
+                    <span class="glyphicon glyphicon-pushpin"></span>
+                    Edit
+                  <% end %>
+                <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                 <span class="glyphicon glyphicon-trash"></span>
+                  Delete
+                 <% end %>
+                </div>
       <% end %> 
       </div>  
     </div>
       <% end %>
 </div>
+</div>
 <div class="center">
 <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
 </div>

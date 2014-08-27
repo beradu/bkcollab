@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622175037) do
+ActiveRecord::Schema.define(version: 20140624114459) do
+
+  create_table "like_likes", force: true do |t|
+    t.string   "liker_type",    null: false
+    t.integer  "liker_id",      null: false
+    t.string   "likeable_type", null: false
+    t.integer  "likeable_id",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "like_likes", ["liker_type", "liker_id", "likeable_type", "likeable_id"], name: "unique_like_likes", unique: true
 
   create_table "pins", force: true do |t|
     t.string   "description"
