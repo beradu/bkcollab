@@ -3,6 +3,7 @@
   <li class="active"><a href="#">Marketing</a></li>
   <li><a href="#">US</a></li>
 </ul>
+<br>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -14,16 +15,34 @@
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
-      <div class="panel-body">
-      <li><b>Key Learnings</b></li><li><b>Brand</b></li>
-      <li>By Quarter</li><li>Identity</li>
-      <li>By Product</li><li> Evolution</li>
-      <li>By Product</li><li> Market Fit</li>
+     <div id="collapseOne" class="panel-collapse collapse">
+    <div class="panel-body">
+          <input type="radio">
+          <span class="label label-default">By Division</span>
+          <input type="radio">
+          <span class="label label-primary">By Quarter</span>
+          <input type="radio">
+          <span class="label label-success">By Product</span>
+          <input type="radio">
+          <span class="label label-info">Brand Identity</span>
+          <input type="radio">
+          <span class="label label-warning">Market Fit</span>
+          <input type="radio">
+          <span class="label label-danger">Brand Identity</span>
+          <div class="row">
+      <br>
+            <div class="col-lg-6 col-lg-push-3">
+              <div class="input-group">
+                <span class="input-group-btn">
+                  <button class="btn btn-warning btn-center" type="button">Search</button>
+                </span>
+                <input type="text" class="form-control" placeholder="Ex. Whopper Analysis">
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div>
       </div>
     </div>
   </div>
-</div>
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
@@ -48,7 +67,6 @@
       </div>  
     </div>
       <% end %>
-</div>
 </div>
 <div class="center">
 <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
