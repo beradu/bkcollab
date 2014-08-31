@@ -17,10 +17,14 @@
   </div>
 
   <div class="form-group">
-    Describe what you are sharing
+    Name
     <%= f.text_field :description, class: "form-control" %>
   </div>
   
+  <div class="form-group">
+     Describe you're BK learning:
+    <%= f.text_area :text, class: "form-control" %>
+  </div>
 
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>

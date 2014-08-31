@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624114459) do
+ActiveRecord::Schema.define(version: 20140831013308) do
 
   create_table "like_likes", force: true do |t|
     t.string   "liker_type",    null: false
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140624114459) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "text"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"

@@ -11,14 +11,20 @@
 			</div>
 	<div class="panel-body">
 	<p>
-  	<%= @pin.description %>
-	</p>
+	<h2 align="center">
+  	<strong><%= @pin.description %></strong>
+	</p></h2>
+	
+	<h3>
+	<p align="center">
+	<%= @pin.text %>
+	</h3>
+	
 	<p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
 	<% if current_user && (@pin.user == current_user) %>
 
-
-	<%= link_to pins_path do %>
+	<%= link_to edit_pin_path(@pin) do %>
 	<span class="glyphicon glyphicon-pushpin"></span> Edit
 		<% end %>
 	<%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>

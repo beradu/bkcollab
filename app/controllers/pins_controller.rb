@@ -28,6 +28,8 @@ class PinsController < ApplicationController
   end
 
   def update
+    @pin = Pin.find(params[:id])
+
     if @pin.update(pin_params)
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
@@ -36,6 +38,7 @@ class PinsController < ApplicationController
   end
 
   def destroy
+    @pin = Pin.find(params[:id])
     @pin.destroy
     redirect_to pins_url
   end
@@ -54,6 +57,6 @@ class PinsController < ApplicationController
     
     # what you permit the user to update 
     def pin_params
-      params.require(:pin).permit(:description, :image)
+      params.require(:pin).permit(:description, :text, :image)
     end
 end
