@@ -5,8 +5,7 @@ Pinteresting::Application.routes.draw do
   root "pins#index"
   get "about" => "pages#about"
   get "Pins" => "pages#pins"
-
-  mount Like::Engine => '/'
+  get "ideas" => "pages#ideas"
 
    #creates about path
   # The priority is based upon order of creation: first created -> highest priority.
