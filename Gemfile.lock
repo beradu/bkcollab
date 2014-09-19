@@ -79,8 +79,6 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    like (0.2.1)
-      rails (>= 3.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -193,7 +191,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
-  like (~> 0.2.1)
   masonry-rails (~> 0.2.0)
   paperclip (~> 4.0)
   pg
